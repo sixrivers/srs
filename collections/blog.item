@@ -36,7 +36,7 @@
 
     <!--SHARE AND LIKE-->
     {@|like-button}
-    {@|social-button}
+    <!--{@|social-button}-->
 
 
     <!--LOCATION-->
@@ -55,44 +55,6 @@
   </article>
 
 {.end}
-
-
-{.section item}
-     {.if categories || tags}
-         {.section categories}
-             {.repeated section @}
-                 <squarespace:query collection="{collection.urlId}" limit="3" category="{@}">
-                     {.if items}
-                     <div class="post-related-items-wrapper clear">
-                         <div class="items">
-                             {.repeated section items}
-                                 {@|apply partial-item-wrapper.block}
-                             {.end}
-                         </div>
-                     </div>
-                     {.end}
-                 </squarespace:query>
-             {.end}
-         {.end}
-         {.section tags}
-             {.repeated section @}
-                 <squarespace:query collection="{collection.urlId}" limit="3" tag="{@}">
-                         {.if items}
-                         <div class="post-related-items-wrapper clear">
-                             <div class="items">
-                                 {.repeated section items}
-                                     {@|apply partial-item-wrapper.block}
-                                 {.end}
-                             </div>
-                         </div>
-                         {.end}
-                 </squarespace:query>
-             {.end}
-         {.end}
-     {.end}
- {.end}
-
-
 
 
 <!--PAGINATION-->
